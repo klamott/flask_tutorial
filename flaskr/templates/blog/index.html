@@ -25,6 +25,4 @@
       <hr>
     {% endif %}
   {% endfor %}
-  <a class="action" href="{{ url_for('blog.index', page=page-1) }}">Previous Page</a>
-  <a class="action" href="{{ url_for('blog.index', page=page+1) }}">Next Page</a>
 {% endblock %}

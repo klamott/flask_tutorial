@@ -10,8 +10,8 @@ bp = Blueprint('blog', __name__)
 
 page_size = 3
 
-@bp.route('/<int:page>/index')
-def index(page=1):
+@bp.route('/<int:page>')
+def index(page):
     db = get_db()
     posts = db.execute(
         'SELECT p.id, title, body, created, author_id, username'
