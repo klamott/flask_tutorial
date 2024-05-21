@@ -39,4 +39,6 @@ def create_app(test_config=None):
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
 
+    app.add_url_rule('/', endpoint='index', view_func=blog.index)
+
     return app
