@@ -25,4 +25,10 @@
       <hr>
     {% endif %}
   {% endfor %}
+  {% if page > 1 %}
+    <a class="action" href="{{ url_for('blog.index', page=page-1) }}">Previous Page</a>
+  {% endif %}
+  {% if has_next_page %}
+    <a class="action" href="{{ url_for('blog.index', page=page+1) }}">Next Page</a>
+  {% endif %}
 {% endblock %}
